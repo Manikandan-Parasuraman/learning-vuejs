@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Vue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <section id="assignment-1">
+        <!-- OUTPUT YOUR NAME -->
+        <h2>{{Name}}</h2>
+        <!-- OUTPUT YOUR AGE -->
+        <p>{{age}}</p>
+        <!-- OUTPUT YOUR AGE + 5 -->
+        <p>{{ calculateAge() }}</p>
+        <!-- OUTPUT A RANDOM NUMBER (0 TO 1) -->
+        <p>{{ randomNumber() }}</p>
+        <div>
+            <!-- DISPLAY SOME IMAGE YOU FOUND VIA GOOGLE -->
+            <img :src="srcImageFromGoogle" alt="googleimg" />
+        </div>
+        <!-- PREPOPULATE THE INPUT FIELD WITH YOUR NAME VIA THE "VALUE" ATTRIBUTE -->
+        <input type="text" name="name" v-model="Name"/>
+    </section>
+</body>
+</html>
